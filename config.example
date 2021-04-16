@@ -1,0 +1,11 @@
+<?php
+
+error_reporting(E_ALL);
+
+$root_path = '/home/username/www/';
+
+$db_host = 'localhost';
+$db_username = 'xxx';
+$db_password = 'xxx';
+$db_database = 'xxx';
+
