@@ -13,7 +13,11 @@ require $root_path. '/includes/html_user_header.php';
         <div class="w-4/5"> 
             <h1 class="text-2xl font-bold">
                 <?php echo isset($_GET['category'])
-                    ? $_GET['category']
+                    ? htmlspecialchars(
+                        $_GET['category'], 
+                        ENT_QUOTES, 
+                        'UTF-8'
+                    )
                     : 'SHOP' 
                 ?>
             </h1>

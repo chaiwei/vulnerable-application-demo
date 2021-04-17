@@ -9,6 +9,10 @@ if (! isset($_SESSION['user_id'])) {
  
 if (isset($_POST['submit'])) {
     
+    if ($_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+        exit('Session Expired');
+    } 
+
     $sql = "
     SELECT * FROM wallets 
     WHERE user_id = '". $_SESSION['user_id']."'";
