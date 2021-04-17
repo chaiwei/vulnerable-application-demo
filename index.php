@@ -43,7 +43,14 @@ require $root_path. '/includes/html_user_header.php';
                     </div>
                 </div>
             </div>
-                
+            <div>
+                <a href="transfer.php" class="px-8 py-2 bg-indigo-600 text-white text-sm font-medium rounded hover:bg-indigo-500 focus:outline-none focus:bg-indigo-500">
+                    Transfer
+                </a>
+            </div>
+        </div>
+        <div class="mt-8 w-full">
+            <?php include $root_path . '/includes/wallet_transaction_tables.php'; ?>
         </div>
     </div>
 </div>

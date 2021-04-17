@@ -56,12 +56,13 @@ class DB {
         }
 
         $time_start = microtime(TRUE);
-
         $query = mysqli_query($this->db_con, $sql);
-
         $time_end = microtime(true);
-
         $query_duration = $time_end - $time_start;
+
+        if (! $query) {
+            echo mysqli_error($this->db_con);
+        }
         
         $this->query[] = array(
             'sql' => $sql,
